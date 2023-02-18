@@ -11,7 +11,7 @@ namespace DataProcessing.Logger
                 if (ConfigHelper.LogType == "Console")
                     builder.ForLogger().FilterMinLevel(LogLevel.Info).WriteToConsole();
                 else if (ConfigHelper.LogType == "File")
-                    builder.ForLogger().FilterMinLevel(LogLevel.Debug).WriteToFile(fileName: "file.txt");
+                    builder.ForLogger().FilterMinLevel(LogLevel.Debug).WriteToFile(fileName: "ErrorLog.log");
                 else 
                     throw new Exception("Wrong log type, check appsetting.json");
             });
