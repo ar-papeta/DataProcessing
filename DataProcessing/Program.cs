@@ -1,7 +1,7 @@
 ﻿using DataProcessing;
 
-string folderPath = ConfigHelper.FolderAPath;
-System.IO.Directory.CreateDirectory(folderPath);
+foreach(var f in FileService.GetDirectoryFilesListFiltered(ConfigHelper.FolderAPath))
+{
+    Console.WriteLine(f.Name);
+}
 
-string workingDirectory = Environment.CurrentDirectory;
-Console.WriteLine(workingDirectory);

@@ -9,5 +9,6 @@ public static class ConfigHelper
 
     public static string FolderAPath => _configuration.GetSection("FolderAPath").Value!;
     public static string FolderBPath => _configuration.GetSection("FolderBPath").Value!;
+    public static string LogType => _configuration.GetSection("LogType").Value!;
 
 }
